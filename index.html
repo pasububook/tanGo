@@ -1,13 +1,31 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <meta name="theme-color" content="#4a6da7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+    <title>tanGo - 英単語学習アプリ</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- デバッグ情報 -->
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        console.error('グローバルエラー:', message, error);
+        if (!document.getElementById('root').hasChildNodes()) {
+          document.body.innerHTML += `
+            <div style="color: red; margin: 20px; padding: 20px; border: 1px solid red;">
+              <h2>エラーが発生しました</h2>
+              <p>${message}</p>
+              <p>場所: ${source} (${lineno}:${colno})</p>
+            </div>
+          `;
+        }
+        return false;
+      };
+    </script>
   </body>
 </html>
