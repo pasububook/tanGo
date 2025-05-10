@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import { loadWords } from './utils'
-import type { Word } from './types'
+// 使用されていないインポートを削除
 
 // コンポーネントのインポート
 import Flashcards from './components/Flashcards'

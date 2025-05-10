@@ -4,10 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react({
-      // Fast Refresh の設定をオンにする
-      fastRefresh: true,
-    })
+    react()
+    // fastRefreshオプションは新しいバージョンでは不要
   ],
   // ビルドの最適化設定
   build: {
@@ -18,8 +16,7 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true, // 開発サーバー起動時にブラウザを自動で開く
-    // ヒストリーモードのための設定
-    historyApiFallback: true,
+    // historyApiFallbackはVite 4.x以降では不要、代わりにbase設定を使用
   },
   // ベースパスを設定
   base: '/'

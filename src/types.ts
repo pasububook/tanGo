@@ -8,7 +8,7 @@ export interface Word {
 
 // TypeScriptのコンパイラでより互換性を持たせるためのコード
 const Types = {
-  Word
+  Word: 'Word' // 値として文字列を使用
 };
 
 export default Types;

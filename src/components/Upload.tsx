@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { parseTSVFile, convertToWords, saveWords } from '../utils';
 import type { Word } from '../types';
 
 const Upload = () => {
   const navigate = useNavigate();
-  const [file, setFile] = useState<File | null>(null);
+  // fileは使用されていないため、setFileのみ残す
+  const [, setFile] = useState<File | null>(null);
   const [fileData, setFileData] = useState<string[][]>([]);
   const [englishColumnIndex, setEnglishColumnIndex] = useState<number>(0);
   const [japaneseColumnIndex, setJapaneseColumnIndex] = useState<number>(1);
