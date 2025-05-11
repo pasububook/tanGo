@@ -19,5 +19,5 @@ export default defineConfig({
     // historyApiFallbackはVite 4.x以降では不要、代わりにbase設定を使用
   },
   // ベースパスを設定
-  base: '/tanGo/'
+  base: './'
 })
