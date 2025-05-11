@@ -1,8 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import { loadWords } from './utils'
-// 使用されていないインポートを削除
 
 // コンポーネントのインポート
 import Flashcards from './components/Flashcards'
@@ -44,7 +43,7 @@ function App() {
   console.log('Appコンポーネントがレンダリングされました');
   
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -53,7 +52,7 @@ function App() {
           <Route path="/upload" element={<Upload />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
